@@ -9,10 +9,14 @@
 
     <h1 style="text-align:center">MENSAJES SECRETOS</h1>
     <div id="root"></div>
-    <textarea id="mensaje" name="name" rows="18" cols="60"></textarea>
-    <button id='cifrar' type="button" name="button">CIFRAR</button>
-    <button type="button" name="button">DESCIFRAR</button>
-    <textarea id='resultado'name="name" rows="18" cols="60"></textarea>
+    <div text-align="center">
+      <p>Pega aquí el mensaje</p>
+      <textarea id="mensaje" name="name" rows="18" cols="80"></textarea>
+      <textarea id='resultado'name="name" rows="18" cols="80"></textarea>
+      <hr>
+      <input id='cifrar'type="button" value="CIFRAR">
+      <input id='descifrar' type="button" value="DESCIFRAR">
+    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
