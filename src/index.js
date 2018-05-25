@@ -1,63 +1,42 @@
-let  texto1= document.getElementById('mensaje');
+let texto=document.getElementById("mensaje");
+let respuesta=document.getElementById('resultado');
 const botonCifrar=document.getElementById('cifrar');
-botonCifrar.addEventListener("click", traducir);
-function traducir() {
-  const producto=texto1.value;
-  mensaje0.value= producto.toUpperCase();
-}
-
-let botonDescifrar=document.getElementById('descifrar');
-botonDescifrar.addEventListener('click', traducir2);
-function traducir2() {
-  const producto2=texto1.value;
-  mensaje0.value=producto2.toUppercase();
-}
-
-const mensaje0=document.getElementById('resultado');
-
-//let texto1= document.getElementById('mensaje');
-const botonCifrar=document.getElementById('cifrar');
-botonCifrar.addEventListener("click", traducir);
-function traducir() {
-  const raro='';
-  for (let i=0; i<texto1.length; i++) {
-    let posicion=texto1.charCodeAt(i);
-    let asci=(posicion-65+25)%26+65;
-    let palabra=fromCharCodeAt(asci);
-    raro=raro + palabra;
+botonCifrar.addEventListener("click", codificar)
+function codificar() {
+  let raro="";
+  let palabra=texto.value;
+  for(let i=0;i<palabra.length;i++){
+  let ascci=palabra.charCodeAt(i);
+  if (ascci>=65 && ascci<=90) {
+    let grande= String.fromCharCode((ascci-65+6)%26+65);
+    raro+= grande;
+  } else if (ascci>=97 && ascci<=122){
+    let chica= String.fromCharCode((ascci-97+6)%26+97);
+    raro+= chica;
+  } else {
+    let otro= String.fromCharCode(ascci);
+    raro+= otro;
     }
-  const producto=raro.value;
-  raro.value= producto.toUpperCase();
-}
-
-let botonDescifrar=document.getElementById('descifrar');
-botonDescifrar.addEventListener('click', traducir2);
-function traducir2() {
-  const raro='';
-  for (let i=0; i<texto1.length; i++) {
-    console.log(texto1[i]);
-    console.log(texto1.charCodeAt(i));
-    console.log(((texto1.charCodeAt(i))-65+33)%26+65);
-    console.log(fromCharCodeAt(((texto1.charCodeAt(i)-65+33)%26+65)));
   }
-  const producto2=texto1.value;
-  mensaje0.value=producto.toUppercase();
+respuesta.value= raro;
 }
-const mensaje0=document.getElementById('resultado');
-
-
-
-
-
-//let texto="mandarina sabrosa";
-let palabra =texto.toUpperCase();
-console.log(palabra);
-console.log(palabra.length);
-let raro="";
+const botonDescifrar=document.getElementById('descifrar');
+botonDescifrar.addEventListener('click', decodificar);
+function decodificar() {
+let rara="";
+let palabra=texto.value;
 for(let i=0;i<palabra.length;i++){
-console.log(palabra.charCodeAt(i));
-console.log((palabra.charCodeAt(i)-65+6)%26+65)
-console.log(String.fromCharCode((palabra.charCodeAt(i)-65+6)%26+65));
-raro=raro+ String.fromCharCode((palabra.charCodeAt(i)-65+6)%26+65);
-let respuesta=raro;
+let ascci=palabra.charCodeAt(i);
+if (ascci>=65 && ascci<=90) {
+  let grande= String.fromCharCode((ascci-65+20)%26+65);
+  rara+= grande;
+} else if (ascci>=97 && ascci<=122){
+  let chica= String.fromCharCode((ascci-97+20)%26+97);
+  rara+= chica;
+} else {
+  let otro= String.fromCharCode(ascci);
+  rara+= otro;
+  }
+}
+respuesta.value= rara;
 }
