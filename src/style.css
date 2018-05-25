@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+  font-size: 67px;
+  color: DarkOrange;
+  text-shadow: -1px -1px 2px #000
+}
+P {
+  font-size: 20PX
+}
+textarea{
+  color: DarkGoldenrod;
+  border: 2px solid DarkGoldenrod
+}
+button{
+  color: yellow;
+}
+body {
+  text-align: center;
+
+  background-image: url("http://3.bp.blogspot.com/-M6p7mi8mwyU/U6VaoPBDT_I/AAAAAAAACeI/tstQZPG372s/s1600/globos-de-colores.jpg");
+}
