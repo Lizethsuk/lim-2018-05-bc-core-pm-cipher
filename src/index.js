@@ -2,7 +2,7 @@ let texto=document.getElementById("mensaje");
 let respuesta=document.getElementById('resultado');
 const botonCifrar=document.getElementById('cifrar');
 botonCifrar.addEventListener("click", codificar)
-function codificar() {
+function encode() {
   let raro="";
   let palabra=texto.value;
   for(let i=0;i<palabra.length;i++){
@@ -22,7 +22,7 @@ respuesta.value= raro;
 }
 const botonDescifrar=document.getElementById('descifrar');
 botonDescifrar.addEventListener('click', decodificar);
-function decodificar() {
+function decode() {
 let rara="";
 let palabra=texto.value;
 for(let i=0;i<palabra.length;i++){
