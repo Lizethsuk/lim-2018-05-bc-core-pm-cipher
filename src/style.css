@@ -1,14 +1,18 @@
 h1 {
     text-align: center;
-    font-size: 67px;
-    color: DarkOrange;
+    font-family: cursive;
+    font-size: 80px;
+    color: yellow;
     text-shadow: -1px -1px 2px #000
+
   }
   P {
     font-size: 20PX
   }
   textarea{
     color: black;
+    font-family: cursive;
+    font-size: 12px;
     border: 2px solid DarkGoldenrod
   }
   button{
@@ -16,6 +20,4 @@ h1 {
   }
   body {
     text-align: center;
-
-    background-image: url("https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/59f05d995cafe8dd5a3c9869/universo-no-existe_0.jpg");
-  }
+    background-image: url("https://image.freepik.com/vector-gratis/fondo-blanco-y-negro-de-lunas-y-estrellas_1110-353.jpg")
