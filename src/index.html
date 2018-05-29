@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-    <h1>FIESTA SORPRESA</h1>
+    <h1 style="text-align:center">MENSAJES OCULTOS</h1>
     <div id="root"></div>
     <div text-align="center">
-      <textarea id="mensaje" name="name" rows="18" cols="65" placeholder="Aquí el mensaje que desees cifrar o descifrar"></textarea><textarea id='resultado'name="name" rows="18" cols="65"></textarea>
-      <hr>
+      <input id='numero' type="text" name="name" placeholder="ingresa numero">
+      <textarea id="mensaje" name="name" rows="18" cols="60"placeholder="aqui tu mensaje que desees cifrar o descifrar"></textarea>
       <input id='cifrar'type="button" value="CIFRAR">
       <input id='descifrar' type="button" value="DESCIFRAR">
+      <textarea id='resultado'name="name" rows="18" cols="60"></textarea>
+      <hr>
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

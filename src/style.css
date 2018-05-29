@@ -1,21 +1,21 @@
 h1 {
-  text-align: center;
-  font-size: 67px;
-  color: DarkOrange;
-  text-shadow: -1px -1px 2px #000
-}
-P {
-  font-size: 20PX
-}
-textarea{
-  color: DarkGoldenrod;
-  border: 2px solid DarkGoldenrod
-}
-button{
-  color: yellow;
-}
-body {
-  text-align: center;
+    text-align: center;
+    font-size: 67px;
+    color: DarkOrange;
+    text-shadow: -1px -1px 2px #000
+  }
+  P {
+    font-size: 20PX
+  }
+  textarea{
+    color: black;
+    border: 2px solid DarkGoldenrod
+  }
+  button{
+    color: yellow;
+  }
+  body {
+    text-align: center;
 
-  background-image: url("http://3.bp.blogspot.com/-M6p7mi8mwyU/U6VaoPBDT_I/AAAAAAAACeI/tstQZPG372s/s1600/globos-de-colores.jpg");
-}
+    background-image: url("https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/59f05d995cafe8dd5a3c9869/universo-no-existe_0.jpg");
+  }
