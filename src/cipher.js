@@ -1,10 +1,9 @@
 window.cipher = {
-  encode: function() {
+  encode: function(offset,string) {
+      let n=parseInt(offset);
       let raro="";
-      let palabra=texto.value;
-      let n=Math.abs(parseInt(offSet.value));
-      for(let i=0;i<palabra.length;i++){
-      let ascci=palabra.charCodeAt(i);
+      for(let i=0;i<string.length;i++){
+      let ascci=string.charCodeAt(i);
       if (ascci>=65 && ascci<=90) {
         let code= String.fromCharCode((ascci-65+n)%26+65);
         raro+= code;
@@ -16,15 +15,14 @@ window.cipher = {
         raro+= code;
         }
       }
-    respuesta.value= raro;
+        return raro;
   },
 
-decode: function() {
+decode: function(offset,string) {
+    let n=parseInt(offset);
     let raro="";
-    let palabra=texto.value;
-    let n=Math.abs(parseInt(offSet.value));
-    for(let i=0;i<palabra.length;i++){
-    let ascci=palabra.charCodeAt(i);
+    for(let i=0;i<string.length;i++){
+    let ascci=string.charCodeAt(i);
     if (ascci>=65 && ascci<=90) {
       if ((ascci-n-65)%26==0||(ascci-n-65)%26>0) {
         let code= String.fromCharCode((ascci-65-n)%26+65);
@@ -44,11 +42,6 @@ decode: function() {
       raro+= code;
       }
     }
-    respuesta.value= raro;
+    return raro;
   },
-  createCipherWithOffset: function(){
-  const palabra="abcdefghijklmnopqrstuvwxyz";
-  const metod=cipher.encode(palabra);
-  const metod2=cipher.decode(palabra);
-}
 }

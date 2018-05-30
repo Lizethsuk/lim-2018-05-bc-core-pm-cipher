@@ -1,7 +1,11 @@
 let texto=document.getElementById("mensaje");
-let offSet=document.getElementById('numero');
+let desplazamiento=document.getElementById('numero');
 let respuesta=document.getElementById('resultado');
 const botonCifrar=document.getElementById('cifrar');
-botonCifrar.addEventListener("click", cipher.encode);
+botonCifrar.addEventListener('click', function(){
+respuesta.value=cipher.encode(desplazamiento.value,texto.value)}
+);
 const botonDescifrar=document.getElementById('descifrar');
-botonDescifrar.addEventListener('click', cipher.decode);
+botonDescifrar.addEventListener('click', function() {
+respuesta.value=cipher.decode(desplazamiento.value,texto.value)}
+);
