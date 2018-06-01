@@ -3,11 +3,14 @@ h1 {
     font-family: cursive;
     font-size: 80px;
     color: yellow;
+    background-color: black;
     text-shadow: -1px -1px 2px #000
 
   }
   P {
-    font-size: 20PX
+    color: yellow;
+    font-size: 25PX;
+    background-color: black;
   }
   textarea{
     color: black;

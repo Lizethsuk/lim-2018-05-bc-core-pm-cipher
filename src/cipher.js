@@ -16,7 +16,7 @@ window.cipher = {
       }
         return output;
   },
-decode: function(offset,string) {
+decode: (offset,string) =>{
     let n=parseInt(offset);
     let raro="";
     for(let i=0;i<string.length;i++){
@@ -40,8 +40,19 @@ decode: function(offset,string) {
       raro+= code;
       }
     }
-    return raro;
+    return raro
   },
+  createCipherWithOffset: (offset)=>{
+    let cdf={
+      encode: (string)=>{
+        return cipher.encode(offset,string);
+      },
+      decode: (string)=>{
+        return cipher.decode(offset,string);
+      }
+    }
+    return cdf
+  }
 }
 
 
